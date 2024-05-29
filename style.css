@@ -1,0 +1,49 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.clock {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 4px solid #333;
+  position: relative;
+}
+
+.hand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+}
+
+.hour {
+  background-color: #333;
+  height: 40%;
+  width: 8px;
+}
+
+.minute {
+  background-color: #555;
+  height: 45%;
+  width: 6px;
+}
+
+.second {
+  background-color: red;
+  height: 50%;
+  width: 2px;
+}
+
+.number {
+  position: absolute;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ... تحديد مواقع الأرقام 1-12 ... */
