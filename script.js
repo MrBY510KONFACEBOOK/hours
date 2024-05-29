@@ -14,8 +14,14 @@ function setTime() {
 
   hourHand.style.transform = `rotate(${hourDegrees}deg)`;
   minuteHand.style.transform = `rotate(${minuteDegrees}deg)`;
+  
+  // Smooth second hand movement with a slight tick
+  secondHand.style.transition = 'none'; // Remove smooth transition briefly
   secondHand.style.transform = `rotate(${secondDegrees}deg)`;
+  setTimeout(() => {
+    secondHand.style.transition = 'transform 0.2s ease-in-out'; // Restore smooth transition
+  }, 0);
 }
 
 setInterval(setTime, 1000);
-setTime(); // تعيين الوقت الأولي
+setTime(); // Set initial time
